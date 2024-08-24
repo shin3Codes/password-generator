@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container h-[100vh] relative flex justify-center items-center box-border font-"> 
+        <div class="wrapper flex flex-col space-y-5  h-auto max-w-[1200px] w-[20%] "> <!--the content will be within this-->
+            <p class="text-center">Password Generator</p> <!--Upper Box-->
+            <div class="display-container flex justify-between">
+                <input readonly placeholder="Password" data-passwordDislay>
+                <button class="btnCopy relative">
+                    <span data-copyMsg class="absolute top:"></span>
+                    <img src="./assets/copy.svg" alt="" width="23" height="23">
+                </button>
+            </div>
+            <div class="relative"> <!--Lower Box-->
+                <div class="header flex justify-between">
+                    <p>Password Length</p>
+                    <p passWord-length>0</p>
+                </div>
+                <div class="content flex flex-col">
+                    <!--SLider-->
+                    <input type="range" min="1" max="20" class="Slider" value="0">
+                    <label for="upperCaseCheckBox"><input type="checkbox" name="" id="upperCaseCheckBox">Include Uppercase letters</label>
+                    <label for="LowerCaseCheckBox"><input type="checkbox" name="" id="LowerCaseCheckBox">Include Lowercase letters</label>
+                    <label for="SpecialCaseCheckBox"><input type="checkbox" name="" id="SpecialCaseCheckBox">Include Specialcase</label>
+                    <label for="NumberCheckBox"><input type="checkbox" name="" id="NumberCheckBox">Include Numbers</label>
+                </div>
+                <!--Strength show of password-->
+                <div class="strength-show flex justify-between items-center">
+                    <p>Strength</p>
+                    <div class="Circle w-[20px] h-[20px] rounded-[50%] bg-slate-300 " ></div>
+                </div>
+                <!--Generate Password-->
+                <div class="footer flex justify-center items-center relative mt-10">
+                    <button class="btn">Generate Password</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
